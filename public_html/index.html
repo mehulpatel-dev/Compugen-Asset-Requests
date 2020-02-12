@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+Title: Compugen Hardware Request Form
+Author: Mehul Patel
+Version: 1.0
+Date: 02/12/2020
+Desc: A form for the self server portal to allow end users to fill and submit for
+hardware requests 
+-->
+<html>
+    <head>
+        <title>Compugen Hardware Request</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background: #555;
+                max-width: 500px;
+                margin: auto;
+                background: white;
+                padding: 10px;
+            }
+
+            .fName {   
+                display: inline-block;
+                width: 200px; 
+            }
+
+            .lName {
+                display: inline-block;  
+                width: 200px; 
+            }
+        </style>
+    </head>
+
+    <body>     
+        <div class ="banner">
+            <h1> Compugen Hardware Request Form</h1>
+        </div>
+
+        <form name="requestForm" method="post" action="/php/hardwareRequest.php">
+            <div class="requestorInfo">
+                <h1>Requester's Information</h1>
+
+                <div class="name">
+                    <p>Name</p>
+                    <div class="fName">
+                        <input type="text" id="fName" name="fName">
+                        </br><span style="text-align:right">First Name</span>
+                    </div>
+
+                    <div class="lName">
+                        <input type="text" id="lName" name="lName">
+                        </br><span style="text-align:right">Last Name</span>
+                    </div>
+                </div>
+
+                </br>
+
+                <div class="email">
+                    <p>Email</p>
+                    <input type="text" id="email" name="email">
+                </div>
+
+                <div class="manager">
+                    <p>Manager</p>
+                    <input type="text" id="manager" name="manager">
+                </div>
+
+                <div class="location">
+                    <p>Employee Location</p> 
+                    <input type="text" id="location" name="location">
+                </div>
+            </div>
+
+            <div class="laptop">
+                <h1>Laptop Computer</h1>
+                <p>Laptop Needs</p>
+
+                <input type="checkbox" name="laptop" value="Laptop">
+                <label for="laptop"> Laptop</label>
+
+                <input type="checkbox" name="keyboard" value="Keyboard">
+                <label for="keyboard"> Keyboard</label>
+
+                <input type="checkbox" name="mouse" value="Mouse">
+                <label for="mouse"> Mouse</label>
+
+                <input type="checkbox" name="monitor" value="Monitor">
+                <label for="monitor"> Monitor</label>
+
+                <input type="checkbox" name="dockingStation" value="Docking Station">
+                <label for="dockingStation"> Docking Station</label>
+            </div>
+
+            <div class="telecommunication">
+                <h1>Telecommunications</h1>
+                <p>Telecommunication Needs</p>
+
+                <input type="checkbox" name="headset" value="Headset">
+                <label for="headset"> Headset</label>
+
+                <input type="checkbox" name="deskphone" value="Deskphone">
+                <label for="deskphone"> Desk Phone</label>
+            </div>
+
+            <div class="additionalrequirements">
+                <h1>Additional Requirements</h1>
+                <label for="specifics">Please be specific</label> </br>
+                <textarea name="additionalrequirements" id="additionalrequirements" rows="6" cols="55"></textarea>
+            </div>
+
+            </br> <input type="submit" value="Submit Form">
+        </form>
+    </body>
+</html>

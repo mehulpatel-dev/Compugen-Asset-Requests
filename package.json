@@ -1,0 +1,8 @@
+{
+    "name": "Compugen_Asset_Requests",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "Mehul",
+    "contributors": [],
+    "dependencies": {}
+}
